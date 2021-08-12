@@ -145,7 +145,11 @@ export default {
     ]
   },
   build: {
-    transpile: ["vee-validate/dist/rules"],
+    transpile: [
+      "vee-validate/dist/rules",
+      "vue-instantsearch",
+      "instantsearch.js/es"
+    ],
     plugins: [
       new webpack.DefinePlugin({
         "process.VERSION": JSON.stringify({

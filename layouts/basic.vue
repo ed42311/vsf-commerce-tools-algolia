@@ -1,6 +1,6 @@
 <template>
   <div id="basic" class="app-container">
-    <h1>Search Test</h1>
+    <h1>Commerce Tools Search</h1>
     <nuxt />
   </div>
 </template>
