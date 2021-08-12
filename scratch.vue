@@ -5,26 +5,6 @@
 </template>
 
 <script>
-import {
-  AisInstantSearchSsr,
-  AisHits,
-  AisSortBy,
-  AisHighlight,
-  AisSearchBox,
-  AisPagination,
-  AisSnippet,
-  AisStats,
-  AisRefinementList,
-  createServerRootMixin
-} from "vue-instantsearch";
-import algoliasearch from "algoliasearch/lite";
-
-const indexName = "instant_search";
-const searchClient = algoliasearch(
-  "latency",
-  "6be0576ff61c053d5f9a3225e2a90f76"
-);
-
 export default {
   layout() {
     return "BasicLayout";

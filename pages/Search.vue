@@ -1,11 +1,15 @@
 <template>
-  <AisInstantSearchSsr> <AisSearchBox /></AisInstantSearchSsr>
+  <AisInstantSearchSsr>
+    <AisSearchBox />
+    <AisHits />
+  </AisInstantSearchSsr>
 </template>
 
 <script>
 import {
   AisInstantSearchSsr,
   AisSearchBox,
+  AisHits,
   createServerRootMixin
 } from "vue-instantsearch";
 import algoliasearch from "algoliasearch/lite";
@@ -74,7 +78,7 @@ function nuxtRouter(vueRouter) {
 
 export default {
   layout() {
-    return "BasicLayout";
+    return "basic";
   },
   serverPrefetch() {
     return this.instantsearch.findResultsState(this).then(algoliaState => {
@@ -105,7 +109,8 @@ export default {
   },
   components: {
     AisInstantSearchSsr,
-    AisSearchBox
+    AisSearchBox,
+    AisHits
   }
 };
 </script>
