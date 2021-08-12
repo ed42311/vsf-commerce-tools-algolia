@@ -41,24 +41,6 @@ export default {
     script: []
   },
   loading: { color: "#fff" },
-  router: {
-    middleware: ["checkout"],
-    parseQuery(queryString) {
-      return require("qs").parse(queryString);
-    },
-    stringifyQuery(object) {
-      var queryString = require("qs").stringify(object);
-      return queryString ? "?" + queryString : "";
-    },
-    extendRoutes(routes) {
-      for (const route of routes) {
-        if (route.path.includes("/Search")) {
-          route.path = "/s";
-        }
-      }
-      return routes;
-    }
-  },
   buildModules: [
     // to core
     "@nuxt/typescript-build",
@@ -166,5 +148,23 @@ export default {
         })
       })
     ]
+  },
+  router: {
+    middleware: ["checkout"],
+    parseQuery(queryString) {
+      return require("qs").parse(queryString);
+    },
+    stringifyQuery(object) {
+      var queryString = require("qs").stringify(object);
+      return queryString ? "?" + queryString : "";
+    },
+    extendRoutes(routes) {
+      for (const route of routes) {
+        if (route.path.includes("/Search")) {
+          route.path = "/s";
+        }
+      }
+      return routes;
+    }
   }
 };

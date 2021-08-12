@@ -1,6 +1,6 @@
 <template>
   <div id="basic" class="app-container">
-    <h1>Commerce Tools Search</h1>
+    <h1>Commerce Tools Base -- No Spryker</h1>
     <nuxt />
   </div>
 </template>
